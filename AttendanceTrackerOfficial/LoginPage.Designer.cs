@@ -29,179 +29,149 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPage));
-            pbtransparentbox = new PictureBox();
-            pbcoilogo = new PictureBox();
-            checkBox1 = new CheckBox();
-            button1 = new Button();
-            linkLabel2 = new LinkLabel();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtusername = new TextBox();
+            txtpassword = new TextBox();
+            btnlogin = new Button();
+            lblusername = new Label();
+            lblpassword = new Label();
+            lbldonthaveacc = new Label();
+            chkbxremember = new CheckBox();
+            lnkforgotpass = new LinkLabel();
             linkLabel1 = new LinkLabel();
-            ((System.ComponentModel.ISupportInitialize)pbtransparentbox).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbcoilogo).BeginInit();
             SuspendLayout();
             // 
-            // pbtransparentbox
+            // txtusername
             // 
-            pbtransparentbox.BackColor = SystemColors.ActiveBorder;
-            pbtransparentbox.Location = new Point(361, 136);
-            pbtransparentbox.Name = "pbtransparentbox";
-            pbtransparentbox.Size = new Size(333, 450);
-            pbtransparentbox.TabIndex = 0;
-            pbtransparentbox.TabStop = false;
+            txtusername.BackColor = Color.White;
+            txtusername.BorderStyle = BorderStyle.None;
+            txtusername.Location = new Point(376, 240);
+            txtusername.Multiline = true;
+            txtusername.Name = "txtusername";
+            txtusername.Size = new Size(230, 35);
+            txtusername.TabIndex = 0;
             // 
-            // pbcoilogo
+            // txtpassword
             // 
-            pbcoilogo.BackColor = Color.Transparent;
-            pbcoilogo.Image = (Image)resources.GetObject("pbcoilogo.Image");
-            pbcoilogo.Location = new Point(424, 21);
-            pbcoilogo.Name = "pbcoilogo";
-            pbcoilogo.Size = new Size(213, 198);
-            pbcoilogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbcoilogo.TabIndex = 1;
-            pbcoilogo.TabStop = false;
+            txtpassword.BackColor = Color.White;
+            txtpassword.BorderStyle = BorderStyle.None;
+            txtpassword.Location = new Point(374, 310);
+            txtpassword.Multiline = true;
+            txtpassword.Name = "txtpassword";
+            txtpassword.Size = new Size(230, 35);
+            txtpassword.TabIndex = 1;
             // 
-            // checkBox1
+            // btnlogin
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.BackColor = SystemColors.ActiveBorder;
-            checkBox1.Font = new Font("Arial", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            checkBox1.Location = new Point(399, 391);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(111, 20);
-            checkBox1.TabIndex = 2;
-            checkBox1.Text = "Remember Me";
-            checkBox1.UseVisualStyleBackColor = false;
+            btnlogin.BackColor = Color.CornflowerBlue;
+            btnlogin.BackgroundImageLayout = ImageLayout.None;
+            btnlogin.ForeColor = SystemColors.ActiveCaptionText;
+            btnlogin.Location = new Point(426, 411);
+            btnlogin.Name = "btnlogin";
+            btnlogin.Size = new Size(129, 51);
+            btnlogin.TabIndex = 2;
+            btnlogin.Text = "LOGIN";
+            btnlogin.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // lblusername
             // 
-            button1.Anchor = AnchorStyles.Bottom;
-            button1.BackColor = SystemColors.Control;
-            button1.Cursor = Cursors.Hand;
-            button1.FlatStyle = FlatStyle.System;
-            button1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.Black;
-            button1.Location = new Point(482, 463);
-            button1.Name = "button1";
-            button1.Size = new Size(100, 35);
-            button1.TabIndex = 3;
-            button1.Text = "LOGIN";
-            button1.UseVisualStyleBackColor = false;
+            lblusername.AutoSize = true;
+            lblusername.BackColor = Color.Transparent;
+            lblusername.Location = new Point(374, 222);
+            lblusername.Name = "lblusername";
+            lblusername.Size = new Size(60, 15);
+            lblusername.TabIndex = 3;
+            lblusername.Text = "Username";
             // 
-            // linkLabel2
+            // lblpassword
             // 
-            linkLabel2.AutoSize = true;
-            linkLabel2.BackColor = SystemColors.ActiveBorder;
-            linkLabel2.LinkColor = Color.Black;
-            linkLabel2.Location = new Point(568, 505);
-            linkLabel2.Name = "linkLabel2";
-            linkLabel2.Size = new Size(49, 15);
-            linkLabel2.TabIndex = 5;
-            linkLabel2.TabStop = true;
-            linkLabel2.Text = "Register";
+            lblpassword.AutoSize = true;
+            lblpassword.BackColor = Color.Transparent;
+            lblpassword.Location = new Point(374, 292);
+            lblpassword.Name = "lblpassword";
+            lblpassword.Size = new Size(57, 15);
+            lblpassword.TabIndex = 4;
+            lblpassword.Text = "Password";
             // 
-            // label1
+            // lbldonthaveacc
             // 
-            label1.AutoSize = true;
-            label1.BackColor = SystemColors.ActiveBorder;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(399, 242);
-            label1.Name = "label1";
-            label1.Size = new Size(81, 21);
-            label1.TabIndex = 6;
-            label1.Text = "Username";
+            lbldonthaveacc.AutoSize = true;
+            lbldonthaveacc.BackColor = Color.Transparent;
+            lbldonthaveacc.Location = new Point(400, 465);
+            lbldonthaveacc.Name = "lbldonthaveacc";
+            lbldonthaveacc.Size = new Size(131, 15);
+            lbldonthaveacc.TabIndex = 5;
+            lbldonthaveacc.Text = "Don't have an account?";
             // 
-            // label2
+            // chkbxremember
             // 
-            label2.AutoSize = true;
-            label2.BackColor = SystemColors.ActiveBorder;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(399, 318);
-            label2.Name = "label2";
-            label2.Size = new Size(76, 21);
-            label2.TabIndex = 7;
-            label2.Text = "Password";
+            chkbxremember.AutoSize = true;
+            chkbxremember.BackColor = Color.Transparent;
+            chkbxremember.Location = new Point(373, 351);
+            chkbxremember.Name = "chkbxremember";
+            chkbxremember.Size = new Size(109, 19);
+            chkbxremember.TabIndex = 6;
+            chkbxremember.Text = "Remember Me?";
+            chkbxremember.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lnkforgotpass
             // 
-            label3.AutoSize = true;
-            label3.BackColor = SystemColors.ActiveBorder;
-            label3.Location = new Point(440, 505);
-            label3.Name = "label3";
-            label3.Size = new Size(131, 15);
-            label3.TabIndex = 8;
-            label3.Text = "Don't have an account?";
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(399, 266);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(258, 42);
-            textBox1.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(399, 342);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(258, 42);
-            textBox2.TabIndex = 10;
+            lnkforgotpass.ActiveLinkColor = Color.Red;
+            lnkforgotpass.AutoSize = true;
+            lnkforgotpass.BackColor = Color.Transparent;
+            lnkforgotpass.LinkColor = Color.Black;
+            lnkforgotpass.Location = new Point(506, 352);
+            lnkforgotpass.Name = "lnkforgotpass";
+            lnkforgotpass.Size = new Size(100, 15);
+            lnkforgotpass.TabIndex = 9;
+            lnkforgotpass.TabStop = true;
+            lnkforgotpass.Text = "Forgot password?";
             // 
             // linkLabel1
             // 
+            linkLabel1.ActiveLinkColor = Color.Red;
             linkLabel1.AutoSize = true;
-            linkLabel1.BackColor = SystemColors.ActiveBorder;
-            linkLabel1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            linkLabel1.BackColor = Color.Transparent;
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(556, 393);
+            linkLabel1.Location = new Point(527, 465);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(100, 15);
-            linkLabel1.TabIndex = 11;
+            linkLabel1.Size = new Size(52, 15);
+            linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Forgot Password?";
+            linkLabel1.Text = "Sign up?";
             // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(1022, 659);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(978, 642);
             Controls.Add(linkLabel1);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(linkLabel2);
-            Controls.Add(button1);
-            Controls.Add(checkBox1);
-            Controls.Add(pbcoilogo);
-            Controls.Add(pbtransparentbox);
-            Enabled = false;
+            Controls.Add(lnkforgotpass);
+            Controls.Add(chkbxremember);
+            Controls.Add(lbldonthaveacc);
+            Controls.Add(lblpassword);
+            Controls.Add(lblusername);
+            Controls.Add(btnlogin);
+            Controls.Add(txtpassword);
+            Controls.Add(txtusername);
+            DoubleBuffered = true;
+            ForeColor = SystemColors.ControlText;
             Name = "LoginPage";
             Text = "LoginPage";
-            ((System.ComponentModel.ISupportInitialize)pbtransparentbox).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbcoilogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pbtransparentbox;
-        private PictureBox pbcoilogo;
-        private CheckBox checkBox1;
-        private Button button1;
-        private LinkLabel linkLabel2;
-        private Label label1;
-        private Label label2;
-        private Label label3;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtusername;
+        private TextBox txtpassword;
+        private Button btnlogin;
+        private Label lblusername;
+        private Label lblpassword;
+        private Label lbldonthaveacc;
+        private CheckBox chkbxremember;
+        private LinkLabel lnkforgotpass;
         private LinkLabel linkLabel1;
     }
 }
