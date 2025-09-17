@@ -44,20 +44,22 @@
             // 
             txtusername.BackColor = Color.White;
             txtusername.BorderStyle = BorderStyle.None;
-            txtusername.Location = new Point(376, 240);
+            txtusername.Location = new Point(430, 320);
+            txtusername.Margin = new Padding(3, 4, 3, 4);
             txtusername.Multiline = true;
             txtusername.Name = "txtusername";
-            txtusername.Size = new Size(230, 35);
+            txtusername.Size = new Size(263, 47);
             txtusername.TabIndex = 0;
             // 
             // txtpassword
             // 
             txtpassword.BackColor = Color.White;
             txtpassword.BorderStyle = BorderStyle.None;
-            txtpassword.Location = new Point(374, 310);
+            txtpassword.Location = new Point(427, 413);
+            txtpassword.Margin = new Padding(3, 4, 3, 4);
             txtpassword.Multiline = true;
             txtpassword.Name = "txtpassword";
-            txtpassword.Size = new Size(230, 35);
+            txtpassword.Size = new Size(263, 47);
             txtpassword.TabIndex = 1;
             // 
             // btnlogin
@@ -65,9 +67,10 @@
             btnlogin.BackColor = Color.CornflowerBlue;
             btnlogin.BackgroundImageLayout = ImageLayout.None;
             btnlogin.ForeColor = SystemColors.ActiveCaptionText;
-            btnlogin.Location = new Point(426, 411);
+            btnlogin.Location = new Point(487, 548);
+            btnlogin.Margin = new Padding(3, 4, 3, 4);
             btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(129, 51);
+            btnlogin.Size = new Size(147, 68);
             btnlogin.TabIndex = 2;
             btnlogin.Text = "LOGIN";
             btnlogin.UseVisualStyleBackColor = false;
@@ -76,9 +79,9 @@
             // 
             lblusername.AutoSize = true;
             lblusername.BackColor = Color.Transparent;
-            lblusername.Location = new Point(374, 222);
+            lblusername.Location = new Point(427, 296);
             lblusername.Name = "lblusername";
-            lblusername.Size = new Size(60, 15);
+            lblusername.Size = new Size(75, 20);
             lblusername.TabIndex = 3;
             lblusername.Text = "Username";
             // 
@@ -86,9 +89,9 @@
             // 
             lblpassword.AutoSize = true;
             lblpassword.BackColor = Color.Transparent;
-            lblpassword.Location = new Point(374, 292);
+            lblpassword.Location = new Point(427, 389);
             lblpassword.Name = "lblpassword";
-            lblpassword.Size = new Size(57, 15);
+            lblpassword.Size = new Size(70, 20);
             lblpassword.TabIndex = 4;
             lblpassword.Text = "Password";
             // 
@@ -96,9 +99,9 @@
             // 
             lbldonthaveacc.AutoSize = true;
             lbldonthaveacc.BackColor = Color.Transparent;
-            lbldonthaveacc.Location = new Point(400, 465);
+            lbldonthaveacc.Location = new Point(457, 620);
             lbldonthaveacc.Name = "lbldonthaveacc";
-            lbldonthaveacc.Size = new Size(131, 15);
+            lbldonthaveacc.Size = new Size(163, 20);
             lbldonthaveacc.TabIndex = 5;
             lbldonthaveacc.Text = "Don't have an account?";
             // 
@@ -106,9 +109,10 @@
             // 
             chkbxremember.AutoSize = true;
             chkbxremember.BackColor = Color.Transparent;
-            chkbxremember.Location = new Point(373, 351);
+            chkbxremember.Location = new Point(426, 468);
+            chkbxremember.Margin = new Padding(3, 4, 3, 4);
             chkbxremember.Name = "chkbxremember";
-            chkbxremember.Size = new Size(109, 19);
+            chkbxremember.Size = new Size(136, 24);
             chkbxremember.TabIndex = 6;
             chkbxremember.Text = "Remember Me?";
             chkbxremember.UseVisualStyleBackColor = false;
@@ -119,12 +123,13 @@
             lnkforgotpass.AutoSize = true;
             lnkforgotpass.BackColor = Color.Transparent;
             lnkforgotpass.LinkColor = Color.Black;
-            lnkforgotpass.Location = new Point(506, 352);
+            lnkforgotpass.Location = new Point(578, 469);
             lnkforgotpass.Name = "lnkforgotpass";
-            lnkforgotpass.Size = new Size(100, 15);
+            lnkforgotpass.Size = new Size(127, 20);
             lnkforgotpass.TabIndex = 9;
             lnkforgotpass.TabStop = true;
             lnkforgotpass.Text = "Forgot password?";
+            lnkforgotpass.LinkClicked += lnkforgotpass_LinkClicked;
             // 
             // linkLabel1
             // 
@@ -132,9 +137,9 @@
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(537, 465);
+            linkLabel1.Location = new Point(614, 620);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(47, 15);
+            linkLabel1.Size = new Size(59, 20);
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Sign up";
@@ -142,10 +147,10 @@
             // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(978, 642);
+            ClientSize = new Size(1118, 856);
             Controls.Add(linkLabel1);
             Controls.Add(lnkforgotpass);
             Controls.Add(chkbxremember);
@@ -157,6 +162,7 @@
             Controls.Add(txtusername);
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginPage";
             Text = "LoginPage";
             ResumeLayout(false);

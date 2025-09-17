@@ -29,5 +29,12 @@ namespace AttendanceTrackerOfficial
             secondForm.Show();
             this.Hide();
         }
+
+        private void lnkforgotpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.Show();
+            this.Hide();
+        }
     }
 }
