@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
 
+
+
 namespace AttendanceTrackerOfficial
 {
  
