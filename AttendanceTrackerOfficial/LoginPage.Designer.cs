@@ -132,12 +132,13 @@
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.LinkColor = Color.Black;
-            linkLabel1.Location = new Point(527, 465);
+            linkLabel1.Location = new Point(537, 465);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(52, 15);
+            linkLabel1.Size = new Size(47, 15);
             linkLabel1.TabIndex = 10;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Sign up?";
+            linkLabel1.Text = "Sign up";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked_1;
             // 
             // LoginPage
             // 

@@ -17,6 +17,17 @@ namespace AttendanceTrackerOfficial
             InitializeComponent();
         }
 
+        private void lbldonthaveacc_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Signup sForm = new Signup();
+            Signup secondForm = new Signup();
+            secondForm.Show();
+            this.Hide();
+        }
     }
 }
