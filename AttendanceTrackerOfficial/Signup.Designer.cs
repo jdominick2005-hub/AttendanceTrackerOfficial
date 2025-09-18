@@ -139,6 +139,7 @@
             lnklogin.TabIndex = 11;
             lnklogin.TabStop = true;
             lnklogin.Text = "Login";
+            lnklogin.LinkClicked += lnklogin_LinkClicked;
             // 
             // label2
             // 

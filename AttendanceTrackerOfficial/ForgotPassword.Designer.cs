@@ -170,7 +170,7 @@ namespace AttendanceTrackerOfficial
             Controls.Add(txtname);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ForgotPassword";
-            Text = "ForgotPassword";
+            Text = "S";
             ResumeLayout(false);
             PerformLayout();
         }

@@ -17,7 +17,7 @@ namespace AttendanceTrackerOfficial
 
     public partial class Signup : Form
     {
-        SqlConnection connect = new SqlConnection("Data Source=GEMINI;InitialCatalog=StudentAttendanceTracker_db;IntegratedSecurity=True;TrustServerCertificate=True");
+        SqlConnection connect = new SqlConnection("Data Source=JAY\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
         public Signup()
         {
@@ -62,7 +62,7 @@ namespace AttendanceTrackerOfficial
                                 MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 //To Switch the form
-                                Signup loginForm = new Signup();
+                                LoginPage loginForm = new LoginPage();
                                 loginForm.Show();
                                 this.Close();
                             }
@@ -86,5 +86,11 @@ namespace AttendanceTrackerOfficial
             this.Close();
         }
 
+        private void lnklogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoginPage loginForm = new LoginPage();
+            loginForm.Show();
+            this.Close(); 
+        }
     }
 }

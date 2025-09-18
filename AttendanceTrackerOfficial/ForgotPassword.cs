@@ -20,50 +20,62 @@ namespace AttendanceTrackerOfficial
             InitializeComponent();
         }
 
-        private void btnresetpassword_Click(string newpassword, string Name)
+        private void btnresetpass_Click(object sender, EventArgs e)
         {
-            using (SqlConnection con = new SqlConnection("Data Source=GERALD\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Trust Server Certificate=True"))
+            string name = txtname.Text.Trim();
+            string newPassword = txtnewpassword.Text.Trim();
+            string confirmPassword = txtconfirmpassword.Text.Trim();
+
+            // ✅ VALIDATION FIRST
+            if (string.IsNullOrEmpty(name))
             {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE Login SET password=@password WHERE username=@username", con);
-                cmd.Parameters.AddWithValue("@password", newpassword);
-                cmd.Parameters.AddWithValue("@name", Name);
-                int rows = cmd.ExecuteNonQuery();
+                MessageBox.Show("Please enter your name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                if (rows > 0)
-                    MessageBox.Show("Password reset successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else
-                    MessageBox.Show("Name not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (string.IsNullOrEmpty(newPassword))
+            {
+                MessageBox.Show("Please enter a new password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                string name = txtname.Text.Trim();
-                string newPassword = txtnewpassword.Text.Trim();
-                string confirmPassword = txtconfirmpassword.Text.Trim();
+            if (newPassword != confirmPassword)
+            {
+                MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                // Validate inputs
-                if (string.IsNullOrEmpty(name))
+            // ✅ IF VALID, UPDATE DB
+            using (SqlConnection con = new SqlConnection("Data Source=JAY\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            {
+                try
                 {
-                    MessageBox.Show("Please enter your name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("UPDATE Login SET password=@password WHERE username=@username", con);
+                    cmd.Parameters.AddWithValue("@password", newPassword);
+                    cmd.Parameters.AddWithValue("@username", name);
+
+                    int rows = cmd.ExecuteNonQuery();
+
+                    if (rows > 0)
+                    {
+                        MessageBox.Show("Password reset successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // ✅ Redirect to Login
+                        LoginPage loginPage = new LoginPage();
+                        loginPage.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Username not found!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-
-                if (string.IsNullOrEmpty(newPassword))
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Please enter a new password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (newPassword != confirmPassword)
-                {
-                    MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-
-                    LoginPage loginPage = new LoginPage();
-                    loginPage.Show();
-                    this.Hide();
+                    MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
         private void btncancel_Click(object sender, EventArgs e)
         {
             LoginPage cancelForm = new LoginPage();
