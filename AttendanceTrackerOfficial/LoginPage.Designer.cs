@@ -172,6 +172,7 @@
             ForeColor = SystemColors.ControlText;
             Name = "LoginPage";
             Text = "LoginPage";
+            Load += LoginPage_Load;
             ResumeLayout(false);
             PerformLayout();
         }

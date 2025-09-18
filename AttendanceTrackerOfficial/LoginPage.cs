@@ -56,10 +56,26 @@ namespace AttendanceTrackerOfficial
 
                     if (table.Rows.Count == 1)
                     {
+                       
+                        
                         MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        if (chkbxremember.Checked)
+                        {
+                            Properties.Settings.Default.username = txtusername.Text.Trim();
+                            Properties.Settings.Default.password = txtpassword.Text.Trim();
+                            Properties.Settings.Default.RememberMe = true;
+                        }
+                        else
+                        {
+                            Properties.Settings.Default.username = "";
+                            Properties.Settings.Default.password = "";
+                            Properties.Settings.Default.RememberMe = false;
+                        }
 
-                        Student_Attendance_Db dashboard = new Student_Attendance_Db();
+                        Properties.Settings.Default.Save();
+
+                            Student_Attendance_Db dashboard = new Student_Attendance_Db();
                         this.Hide();
                         dashboard.Show();
                     }
@@ -74,9 +90,19 @@ namespace AttendanceTrackerOfficial
             {
                 MessageBox.Show("Databasse Connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally 
+            finally
             {
                 connect.Close();
+            }
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+            if(Properties.Settings.Default.RememberMe)
+            {
+                txtusername.Text = Properties.Settings.Default.username;
+                txtpassword.Text = Properties.Settings.Default.password;
+                chkbxremember.Checked = true;
             }
         }
     }
