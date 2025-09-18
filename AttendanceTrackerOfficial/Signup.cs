@@ -81,7 +81,7 @@ namespace AttendanceTrackerOfficial
         }
         private void signup_loginHere_Click(object sender, EventArgs e)
         {
-            Signup loginForm = new Signup();
+            LoginPage loginForm = new LoginPage();
             loginForm.Show();
             this.Close();
         }
