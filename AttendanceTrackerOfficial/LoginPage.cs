@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace AttendanceTrackerOfficial
 {
@@ -30,11 +31,53 @@ namespace AttendanceTrackerOfficial
             this.Hide();
         }
 
+        SqlConnection connect = new SqlConnection("Data Source=JAY\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            Student_Attendance_Db dashboard = new Student_Attendance_Db();
-            this.Hide();
-            dashboard.Show();
+            if (string.IsNullOrWhiteSpace(txtusername.Text) || string.IsNullOrWhiteSpace(txtpassword.Text))
+            {
+                MessageBox.Show("Please fill in both Username and Password fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                connect.Open();
+
+                string query = "SELECT * FROM admin WHERE username = @username and password = @password";
+
+                using (SqlCommand cmd = new SqlCommand(query, connect))
+                {
+                    cmd.Parameters.AddWithValue("@username", txtusername.Text.Trim());
+                    cmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    DataTable table = new DataTable();
+                    adapter.Fill(table);
+
+                    if (table.Rows.Count == 1)
+                    {
+                        MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                        Student_Attendance_Db dashboard = new Student_Attendance_Db();
+                        this.Hide();
+                        dashboard.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Databasse Connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally 
+            {
+                connect.Close();
+            }
         }
     }
 }
