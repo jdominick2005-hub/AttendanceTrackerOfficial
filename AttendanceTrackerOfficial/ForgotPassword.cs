@@ -37,7 +37,7 @@ namespace AttendanceTrackerOfficial
 
                 string name = txtname.Text.Trim();
                 string newPassword = txtnewpassword.Text.Trim();
-                string confirmPassword = txtcurrentpassword.Text.Trim();
+                string confirmPassword = txtconfirmpassword.Text.Trim();
 
                 // Validate inputs
                 if (string.IsNullOrEmpty(name))
@@ -62,6 +62,13 @@ namespace AttendanceTrackerOfficial
                     this.Hide();
                 }
             }
+        }
+
+        private void btncancel_Click(object sender, EventArgs e)
+        {
+            LoginPage cancelForm = new LoginPage();
+            cancelForm.Show();
+            this.Close();
         }
     }
 }

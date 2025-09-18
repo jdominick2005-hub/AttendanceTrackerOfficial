@@ -14,25 +14,17 @@ using Microsoft.Data.SqlClient;
 
 namespace AttendanceTrackerOfficial
 {
- 
+
     public partial class Signup : Form
     {
         SqlConnection connect = new SqlConnection("Data Source=GEMINI;InitialCatalog=StudentAttendanceTracker_db;IntegratedSecurity=True;TrustServerCertificate=True");
 
         public Signup()
-        { 
+        {
             InitializeComponent();
         }
-        
-
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-          
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (connect.State != ConnectionState.Open)
             {
                 try
@@ -87,18 +79,12 @@ namespace AttendanceTrackerOfficial
                 }
             }
         }
-        
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void signup_loginHere_Click(object sender, EventArgs e)
         {
             Signup loginForm = new Signup();
             loginForm.Show();
             this.Close();
         }
+
     }
 }
