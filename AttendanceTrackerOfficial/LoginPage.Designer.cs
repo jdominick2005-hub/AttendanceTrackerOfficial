@@ -73,6 +73,7 @@
             btnlogin.TabIndex = 2;
             btnlogin.Text = "LOGIN";
             btnlogin.UseVisualStyleBackColor = false;
+            btnlogin.Click += btnlogin_Click;
             // 
             // lblusername
             // 

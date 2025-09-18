@@ -29,5 +29,12 @@ namespace AttendanceTrackerOfficial
             secondForm.Show();
             this.Hide();
         }
+
+        private void btnlogin_Click(object sender, EventArgs e)
+        {
+            Student_Attendance_Db dashboard = new Student_Attendance_Db();
+            this.Hide();
+            dashboard.Show();
+        }
     }
 }
