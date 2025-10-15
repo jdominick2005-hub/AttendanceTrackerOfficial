@@ -57,7 +57,7 @@
             label12.AutoSize = true;
             label12.BackColor = Color.Silver;
             label12.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label12.Location = new Point(606, 9);
+            label12.Location = new Point(631, 9);
             label12.Name = "label12";
             label12.Size = new Size(143, 20);
             label12.TabIndex = 73;
