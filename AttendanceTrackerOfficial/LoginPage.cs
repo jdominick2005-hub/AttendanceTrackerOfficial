@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 using Microsoft.Data.SqlClient;
 
 namespace AttendanceTrackerOfficial
@@ -17,6 +18,7 @@ namespace AttendanceTrackerOfficial
         {
             InitializeComponent();
         }
+
         private void lnkforgotpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPassword forgotPassword = new ForgotPassword();
@@ -31,7 +33,11 @@ namespace AttendanceTrackerOfficial
             this.Hide();
         }
 
-        SqlConnection connect = new SqlConnection("Data Source=JAY\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
+        // ✅ Remove this — no need to hardcode connection here
+        // SqlConnection connect = new SqlConnection(
+        //  "Data Source=DESKTOP-279O6NS\\SQLEXPRESS;Initial Catalog=UserInformationDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"
+        // );
+
         private void btnlogin_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtusername.Text) || string.IsNullOrWhiteSpace(txtpassword.Text))
@@ -39,14 +45,18 @@ namespace AttendanceTrackerOfficial
                 MessageBox.Show("Please fill in both Username and Password fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+
+            // ✅ Use connection string from App.config instead
+            string connectionString = ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString;
+
             try
             {
-                connect.Open();
-
-                string query = "SELECT * FROM admin WHERE username = @username and password = @password";
-
-                using (SqlCommand cmd = new SqlCommand(query, connect))
+                using (SqlConnection connect = new SqlConnection(connectionString))
                 {
+                    connect.Open();
+
+                    string query = "SELECT UserID FROM Users WHERE Username = @username AND Password = @password";
+                    SqlCommand cmd = new SqlCommand(query, connect);
                     cmd.Parameters.AddWithValue("@username", txtusername.Text.Trim());
                     cmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());
 
@@ -56,49 +66,32 @@ namespace AttendanceTrackerOfficial
 
                     if (table.Rows.Count == 1)
                     {
-                       
-                        
                         MessageBox.Show("Login Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        if (chkbxremember.Checked)
-                        {
-                            Properties.Settings.Default.username = txtusername.Text.Trim();
-                            Properties.Settings.Default.password = txtpassword.Text.Trim();
-                            Properties.Settings.Default.RememberMe = true;
-                        }
-                        else
-                        {
-                            Properties.Settings.Default.username = "";
-                            Properties.Settings.Default.password = "";
-                            Properties.Settings.Default.RememberMe = false;
-                        }
-
+                        Properties.Settings.Default.username = chkbxremember.Checked ? txtusername.Text.Trim() : "";
+                        Properties.Settings.Default.password = chkbxremember.Checked ? txtpassword.Text.Trim() : "";
+                        Properties.Settings.Default.RememberMe = chkbxremember.Checked;
                         Properties.Settings.Default.Save();
 
-                            Student_Attendance_Db dashboard = new Student_Attendance_Db();
+                        Student_Attendance_Db dashboard = new Student_Attendance_Db();
                         this.Hide();
                         dashboard.Show();
                     }
                     else
                     {
                         MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Databasse Connection error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                connect.Close();
+                MessageBox.Show("Database Connection Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            if(Properties.Settings.Default.RememberMe)
+            if (Properties.Settings.Default.RememberMe)
             {
                 txtusername.Text = Properties.Settings.Default.username;
                 txtpassword.Text = Properties.Settings.Default.password;

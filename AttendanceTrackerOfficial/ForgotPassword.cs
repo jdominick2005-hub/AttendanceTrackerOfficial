@@ -1,15 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static Azure.Core.HttpHeader;
 
 namespace AttendanceTrackerOfficial
 {
@@ -29,7 +21,7 @@ namespace AttendanceTrackerOfficial
             // ✅ VALIDATION FIRST
             if (string.IsNullOrEmpty(name))
             {
-                MessageBox.Show("Please enter your name.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter your username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -45,22 +37,26 @@ namespace AttendanceTrackerOfficial
                 return;
             }
 
-            // ✅ IF VALID, UPDATE DB
-            using (SqlConnection con = new SqlConnection("Data Source=JAY\\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True"))
+            // ✅ IF VALID, UPDATE DATABASE
+            using (SqlConnection con = new SqlConnection(
+                "Data Source=DESKTOP-279O6NS\\SQLEXPRESS;Initial Catalog=UserInformationDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"))
             {
                 try
                 {
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("UPDATE Login SET password=@password WHERE username=@username", con);
+
+                    // ✅ Make sure this table and column names match your DB
+                    SqlCommand cmd = new SqlCommand(
+                        "UPDATE Users SET Password=@password WHERE name= @name", con);
+
                     cmd.Parameters.AddWithValue("@password", newPassword);
-                    cmd.Parameters.AddWithValue("@username", name);
+                    cmd.Parameters.AddWithValue("@name", name);
 
                     int rows = cmd.ExecuteNonQuery();
 
                     if (rows > 0)
                     {
                         MessageBox.Show("Password reset successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // ✅ Redirect to Login
                         LoginPage loginPage = new LoginPage();
                         loginPage.Show();
                         this.Close();
@@ -76,11 +72,19 @@ namespace AttendanceTrackerOfficial
                 }
             }
         }
+
         private void btncancel_Click(object sender, EventArgs e)
         {
             LoginPage cancelForm = new LoginPage();
             cancelForm.Show();
             this.Close();
         }
+
+        private void ForgotPassword_Load(object sender, EventArgs e)
+        {
+
+        }
+     
+
     }
 }

@@ -88,7 +88,8 @@ namespace AttendanceTrackerOfficial
             btnresetpass.TabIndex = 3;
             btnresetpass.Text = "Reset";
             btnresetpass.UseVisualStyleBackColor = false;
-            btnresetpass.Click += btnresetpassword_Click;
+            btnresetpass.Click += btnresetpass_Click;
+
             // 
             // lblsignup
             // 
@@ -171,13 +172,14 @@ namespace AttendanceTrackerOfficial
             Margin = new Padding(3, 2, 3, 2);
             Name = "ForgotPassword";
             Text = "S";
+            Load += ForgotPassword_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         private void btnresetpassword_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+           
         }
 
        

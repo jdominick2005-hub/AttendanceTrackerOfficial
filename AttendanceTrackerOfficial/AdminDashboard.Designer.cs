@@ -38,6 +38,7 @@
             ClientSize = new Size(978, 642);
             Name = "AdminDashboard";
             Text = "AdminDashboard";
+            Load += AdminDashboard_Load;
             ResumeLayout(false);
         }
 

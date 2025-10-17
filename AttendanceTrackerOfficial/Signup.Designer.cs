@@ -36,7 +36,7 @@
             label1 = new Label();
             signup_password = new TextBox();
             signup_username = new TextBox();
-            textBox1 = new TextBox();
+            signup_name = new TextBox();
             lnklogin = new LinkLabel();
             label2 = new Label();
             SuspendLayout();
@@ -119,13 +119,14 @@
             signup_username.Size = new Size(295, 34);
             signup_username.TabIndex = 1;
             // 
-            // textBox1
+            // signup_name
             // 
-            textBox1.Location = new Point(483, 251);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(295, 34);
-            textBox1.TabIndex = 0;
+            signup_name.Location = new Point(483, 251);
+            signup_name.Multiline = true;
+            signup_name.Name = "signup_name";
+            signup_name.Size = new Size(295, 34);
+            signup_name.TabIndex = 0;
+            signup_name.TextChanged += textBox1_TextChanged;
             // 
             // lnklogin
             // 
@@ -163,7 +164,7 @@
             Controls.Add(lnklogin);
             Controls.Add(lblalrhaveacc);
             Controls.Add(label1);
-            Controls.Add(textBox1);
+            Controls.Add(signup_name);
             Controls.Add(signup_btn);
             Controls.Add(signup_username);
             Controls.Add(signup_password);
@@ -180,7 +181,7 @@
         private Label label1;
         private TextBox signup_password;
         private TextBox signup_username;
-        private TextBox textBox1;
+        private TextBox signup_name;
         private Label label3;
         private Button signup_btn;
         private Label lblalrhaveacc;
