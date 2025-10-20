@@ -133,7 +133,7 @@
             lnklogin.AutoSize = true;
             lnklogin.BackColor = Color.Transparent;
             lnklogin.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lnklogin.LinkColor = Color.SkyBlue;
+            lnklogin.LinkColor = Color.LightSkyBlue;
             lnklogin.Location = new Point(682, 488);
             lnklogin.Name = "lnklogin";
             lnklogin.Size = new Size(37, 15);

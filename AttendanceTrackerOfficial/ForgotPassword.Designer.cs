@@ -89,7 +89,6 @@ namespace AttendanceTrackerOfficial
             btnresetpass.Text = "Reset";
             btnresetpass.UseVisualStyleBackColor = false;
             btnresetpass.Click += btnresetpass_Click;
-
             // 
             // lblsignup
             // 
@@ -97,7 +96,7 @@ namespace AttendanceTrackerOfficial
             lblsignup.BackColor = Color.Transparent;
             lblsignup.Font = new Font("Georgia", 26.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblsignup.ForeColor = Color.White;
-            lblsignup.Location = new Point(502, 175);
+            lblsignup.Location = new Point(502, 183);
             lblsignup.Name = "lblsignup";
             lblsignup.Size = new Size(260, 41);
             lblsignup.TabIndex = 4;
@@ -109,7 +108,7 @@ namespace AttendanceTrackerOfficial
             lblname.BackColor = Color.Transparent;
             lblname.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblname.ForeColor = Color.White;
-            lblname.Location = new Point(481, 241);
+            lblname.Location = new Point(481, 240);
             lblname.Name = "lblname";
             lblname.Size = new Size(44, 17);
             lblname.TabIndex = 5;
@@ -121,7 +120,7 @@ namespace AttendanceTrackerOfficial
             lblnewpass.BackColor = Color.Transparent;
             lblnewpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblnewpass.ForeColor = Color.White;
-            lblnewpass.Location = new Point(481, 307);
+            lblnewpass.Location = new Point(481, 306);
             lblnewpass.Name = "lblnewpass";
             lblnewpass.Size = new Size(97, 17);
             lblnewpass.TabIndex = 6;
@@ -133,7 +132,7 @@ namespace AttendanceTrackerOfficial
             lblconfirmpass.BackColor = Color.Transparent;
             lblconfirmpass.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblconfirmpass.ForeColor = Color.White;
-            lblconfirmpass.Location = new Point(480, 372);
+            lblconfirmpass.Location = new Point(480, 371);
             lblconfirmpass.Name = "lblconfirmpass";
             lblconfirmpass.Size = new Size(149, 17);
             lblconfirmpass.TabIndex = 7;
@@ -142,6 +141,7 @@ namespace AttendanceTrackerOfficial
             // btncancel
             // 
             btncancel.BackColor = Color.White;
+            btncancel.BackgroundImageLayout = ImageLayout.None;
             btncancel.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btncancel.ForeColor = Color.DodgerBlue;
             btncancel.Location = new Point(632, 469);
