@@ -35,6 +35,7 @@
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             panel3 = new Panel();
+            button3 = new Button();
             button6 = new Button();
             button5 = new Button();
             button4 = new Button();
@@ -44,7 +45,7 @@
             label1 = new Label();
             label2 = new Label();
             button1 = new Button();
-            button3 = new Button();
+            button7 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
@@ -113,6 +114,7 @@
             // 
             panel3.BackColor = SystemColors.GradientActiveCaption;
             panel3.BorderStyle = BorderStyle.FixedSingle;
+            panel3.Controls.Add(button7);
             panel3.Controls.Add(button3);
             panel3.Controls.Add(button6);
             panel3.Controls.Add(button5);
@@ -123,6 +125,16 @@
             panel3.Size = new Size(212, 551);
             panel3.TabIndex = 1;
             // 
+            // button3
+            // 
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Location = new Point(-2, 60);
+            button3.Name = "button3";
+            button3.Size = new Size(176, 67);
+            button3.TabIndex = 5;
+            button3.Text = "Student Registration";
+            button3.UseVisualStyleBackColor = true;
+            // 
             // button6
             // 
             button6.FlatStyle = FlatStyle.Popup;
@@ -130,7 +142,7 @@
             button6.Name = "button6";
             button6.Size = new Size(176, 67);
             button6.TabIndex = 4;
-            button6.Text = "button6";
+            button6.Text = "Daily Attendance";
             button6.UseVisualStyleBackColor = true;
             // 
             // button5
@@ -140,7 +152,7 @@
             button5.Name = "button5";
             button5.Size = new Size(176, 67);
             button5.TabIndex = 3;
-            button5.Text = "button5";
+            button5.Text = "Taking Attendance";
             button5.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -150,7 +162,7 @@
             button4.Name = "button4";
             button4.Size = new Size(176, 67);
             button4.TabIndex = 2;
-            button4.Text = "button4";
+            button4.Text = "Assign Subject";
             button4.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -162,7 +174,7 @@
             button2.Name = "button2";
             button2.Size = new Size(176, 60);
             button2.TabIndex = 0;
-            button2.Text = "button2";
+            button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = false;
             // 
             // sqlCommand1
@@ -208,15 +220,15 @@
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // button7
             // 
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(-2, 60);
-            button3.Name = "button3";
-            button3.Size = new Size(176, 67);
-            button3.TabIndex = 5;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            button7.FlatStyle = FlatStyle.Popup;
+            button7.Location = new Point(-2, 325);
+            button7.Name = "button7";
+            button7.Size = new Size(176, 67);
+            button7.TabIndex = 6;
+            button7.Text = "Attendance Summary";
+            button7.UseVisualStyleBackColor = true;
             // 
             // Student_Attendance_Db
             // 
@@ -259,5 +271,6 @@
         private Button button4;
         private Button button6;
         private Button button3;
+        private Button button7;
     }
 }
