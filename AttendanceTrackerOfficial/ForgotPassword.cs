@@ -18,7 +18,6 @@ namespace AttendanceTrackerOfficial
             string newPassword = txtnewpassword.Text.Trim();
             string confirmPassword = txtconfirmpassword.Text.Trim();
 
-            // ✅ VALIDATION FIRST
             if (string.IsNullOrEmpty(name))
             {
                 MessageBox.Show("Please enter your username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,18 +36,15 @@ namespace AttendanceTrackerOfficial
                 return;
             }
 
-            // ✅ IF VALID, UPDATE DATABASE
             using (SqlConnection con = new SqlConnection(
-                "Data Source=DESKTOP-279O6NS\\SQLEXPRESS;Initial Catalog=UserInformationDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"))
+                System.Configuration.ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString))
             {
                 try
                 {
                     con.Open();
 
-                    // ✅ Make sure this table and column names match your DB
                     SqlCommand cmd = new SqlCommand(
-                        "UPDATE Users SET Password=@password WHERE name= @name", con);
-
+                        "UPDATE Logins SET Password=@password WHERE Name=@name", con);
                     cmd.Parameters.AddWithValue("@password", newPassword);
                     cmd.Parameters.AddWithValue("@name", name);
 
@@ -72,6 +68,7 @@ namespace AttendanceTrackerOfficial
                 }
             }
         }
+
 
         private void btncancel_Click(object sender, EventArgs e)
         {

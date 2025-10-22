@@ -1,2 +1,2 @@
-﻿INSERT INTO Login (Username, password)
-VALUES ('gerald', '12345');
+﻿INSERT INTO Users (username, password, name)
+VALUES ('admin', '12345', 'Russel');

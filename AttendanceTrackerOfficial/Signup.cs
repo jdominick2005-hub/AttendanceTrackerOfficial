@@ -1,111 +1,119 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Microsoft.Data.SqlClient;
+﻿     using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+    using System.Windows.Forms;
+    using Microsoft.Data.SqlClient;
+    using System.Configuration;
 
 
 
 
-namespace AttendanceTrackerOfficial
-{
-
-    public partial class Signup : Form
+    namespace AttendanceTrackerOfficial
     {
-        SqlConnection connect = new SqlConnection(
-    "Data Source=DESKTOP-279O6NS\\SQLEXPRESS;Initial Catalog=UserInformationDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"
-);
+
+        public partial class Signup : Form
+        {
+            SqlConnection connect = new SqlConnection(
+             ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString
+         );
 
 
-        public Signup()
-        {
-            InitializeComponent();
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (connect.State != ConnectionState.Open)
+
+
+            public Signup()
             {
-                try
+                InitializeComponent();
+            }
+            private void button1_Click(object sender, EventArgs e)
+            {
+                if (connect.State != ConnectionState.Open)
                 {
-                    connect.Open();
-
-                    // Secure parameterized query for checking username
-                    string checkUsername = "SELECT * FROM Users WHERE Username = @username";
-                    using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
+                    try
                     {
-                        checkUser.Parameters.AddWithValue("@username", signup_username.Text.Trim());
+                        connect.Open();
 
-                        SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
-                        DataTable table = new DataTable();
-                        adapter.Fill(table);
-
-                        if (table.Rows.Count >= 1)
+                        // Secure parameterized query for checking username
+                        string checkUsername = "SELECT * FROM Logins WHERE Username = @username";
+                        using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
                         {
-                            MessageBox.Show(signup_username.Text + " already exists",
-                                            "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                        else
-                        {
-                            // Insert new user (including name)
-                            string insertData = "INSERT INTO Users (name, username, password, date_created) " +
-                                                "VALUES(@name, @username, @password, @date)";
+                            checkUser.Parameters.AddWithValue("@username", signup_username.Text.Trim());
 
-                            DateTime date = DateTime.Today;
+                            SqlDataAdapter adapter = new SqlDataAdapter(checkUser);
+                            DataTable table = new DataTable();
+                            adapter.Fill(table);
 
-                            using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                            if (table.Rows.Count >= 1)
                             {
-                                cmd.Parameters.AddWithValue("@name", signup_name.Text.Trim());
-                                cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-                                cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
-                                cmd.Parameters.AddWithValue("@date", date);
+                                MessageBox.Show(signup_username.Text + " already exists",
+                                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                            else
+                            {
+                                // Insert new user (including name)
+                                string insertData = "INSERT INTO Logins (Name, Username, Password, Date_Created) " +
+                                                    "VALUES(@name, @username, @password, @date)";
 
-                                cmd.ExecuteNonQuery();
+                                DateTime date = DateTime.Today;
 
-                                MessageBox.Show("Registered successfully!",
-                                                "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                using (SqlCommand cmd = new SqlCommand(insertData, connect))
+                                {
+                                    cmd.Parameters.AddWithValue("@name", signup_name.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@date", date);
 
-                                // Switch to login form
-                                LoginPage loginForm = new LoginPage();
-                                loginForm.Show();
-                                this.Close();
+                                    cmd.ExecuteNonQuery();
+
+                                    MessageBox.Show("Registered successfully!",
+                                                    "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    // Switch to login form
+                                    LoginPage loginForm = new LoginPage();
+                                    loginForm.Show();
+                                    this.Close();
+                                }
                             }
                         }
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error connecting Database: " + ex.Message,
-                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    connect.Close();
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error connecting Database: " + ex.Message,
+                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    finally
+                    {
+                        connect.Close();
+                    }
                 }
             }
-        }
 
-        private void signup_loginHere_Click(object sender, EventArgs e)
-        {
-            LoginPage loginForm = new LoginPage();
-            loginForm.Show();
-            this.Close();
-        }
+            private void signup_loginHere_Click(object sender, EventArgs e)
+            {
+                LoginPage loginForm = new LoginPage();
+                loginForm.Show();
+                this.Close();
+            }
 
-        private void lnklogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            LoginPage loginForm = new LoginPage();
-            loginForm.Show();
-            this.Close();
-        }
+            private void lnklogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+            {
+                LoginPage loginForm = new LoginPage();
+                loginForm.Show();
+                this.Close();
+            }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
+            private void textBox1_TextChanged(object sender, EventArgs e)
+            {
 
+            }
+
+            private void Signup_Load(object sender, EventArgs e)
+            {
+
+            }
         }
     }
-}

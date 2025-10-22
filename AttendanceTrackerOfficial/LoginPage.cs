@@ -33,10 +33,7 @@ namespace AttendanceTrackerOfficial
             this.Hide();
         }
 
-        // ✅ Remove this — no need to hardcode connection here
-        // SqlConnection connect = new SqlConnection(
-        //  "Data Source=DESKTOP-279O6NS\\SQLEXPRESS;Initial Catalog=UserInformationDB;Integrated Security=True;Encrypt=False;TrustServerCertificate=True"
-        // );
+     
 
         private void btnlogin_Click(object sender, EventArgs e)
         {
@@ -55,7 +52,7 @@ namespace AttendanceTrackerOfficial
                 {
                     connect.Open();
 
-                    string query = "SELECT UserID FROM Users WHERE Username = @username AND Password = @password";
+                    string query = "SELECT UserID FROM Logins WHERE Username = @username AND Password = @password";
                     SqlCommand cmd = new SqlCommand(query, connect);
                     cmd.Parameters.AddWithValue("@username", txtusername.Text.Trim());
                     cmd.Parameters.AddWithValue("@password", txtpassword.Text.Trim());

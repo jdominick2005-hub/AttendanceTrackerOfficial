@@ -172,6 +172,7 @@
             Controls.Add(label3);
             Name = "Signup";
             Text = "Signup";
+            Load += Signup_Load;
             ResumeLayout(false);
             PerformLayout();
         }
