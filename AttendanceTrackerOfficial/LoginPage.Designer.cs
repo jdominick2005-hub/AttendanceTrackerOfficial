@@ -106,9 +106,9 @@
             chkbxremember.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             chkbxremember.Location = new Point(373, 351);
             chkbxremember.Name = "chkbxremember";
-            chkbxremember.Size = new Size(103, 17);
+            chkbxremember.Size = new Size(107, 17);
             chkbxremember.TabIndex = 6;
-            chkbxremember.Text = "Remember me?";
+            chkbxremember.Text = "Show Password";
             chkbxremember.UseVisualStyleBackColor = false;
             // 
             // lnkforgotpass
