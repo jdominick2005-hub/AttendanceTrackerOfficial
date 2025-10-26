@@ -33,7 +33,7 @@
             pictureBox2 = new PictureBox();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             button7 = new Button();
-            button3 = new Button();
+            btnStudentManagement = new Button();
             button6 = new Button();
             button4 = new Button();
             button2 = new Button();
@@ -86,19 +86,20 @@
             button7.Text = "Attendance Report";
             button7.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnStudentManagement
             // 
-            button3.BackColor = Color.SteelBlue;
-            button3.BackgroundImageLayout = ImageLayout.None;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button3.Location = new Point(12, 77);
-            button3.Name = "button3";
-            button3.Size = new Size(195, 48);
-            button3.TabIndex = 5;
-            button3.Text = "Student Management";
-            button3.UseVisualStyleBackColor = false;
+            btnStudentManagement.BackColor = Color.SteelBlue;
+            btnStudentManagement.BackgroundImageLayout = ImageLayout.None;
+            btnStudentManagement.FlatAppearance.BorderSize = 0;
+            btnStudentManagement.FlatStyle = FlatStyle.Flat;
+            btnStudentManagement.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
+            btnStudentManagement.Location = new Point(12, 77);
+            btnStudentManagement.Name = "btnStudentManagement";
+            btnStudentManagement.Size = new Size(195, 48);
+            btnStudentManagement.TabIndex = 5;
+            btnStudentManagement.Text = "Student Management";
+            btnStudentManagement.UseVisualStyleBackColor = false;
+            btnStudentManagement.Click += btnStudentManagement_Click;
             // 
             // button6
             // 
@@ -134,9 +135,9 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.System;
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(12, 10);
+            button2.Location = new Point(12, 21);
             button2.Name = "button2";
-            button2.Size = new Size(196, 48);
+            button2.Size = new Size(180, 48);
             button2.TabIndex = 0;
             button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = false;
@@ -172,7 +173,7 @@
             panel3.BackColor = Color.SteelBlue;
             panel3.BackgroundImageLayout = ImageLayout.None;
             panel3.Controls.Add(button7);
-            panel3.Controls.Add(button3);
+            panel3.Controls.Add(btnStudentManagement);
             panel3.Controls.Add(button6);
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button2);
@@ -223,6 +224,7 @@
             Controls.Add(panel1);
             Controls.Add(label5);
             Name = "Student_Attendance_Db";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Student_Attendance_Db";
             Load += Student_Attendance_Db_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -238,7 +240,7 @@
         private PictureBox pictureBox2;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
         private Button button7;
-        private Button button3;
+        private Button btnStudentManagement;
         private Button button6;
         private Button button4;
         private Button button2;

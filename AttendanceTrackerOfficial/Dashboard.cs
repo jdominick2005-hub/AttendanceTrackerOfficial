@@ -25,5 +25,12 @@ namespace AttendanceTrackerOfficial
         {
 
         }
+
+        private void btnStudentManagement_Click(object sender, EventArgs e)
+        {
+            Registration RegistrationForm = new Registration();
+            this.Hide();
+            RegistrationForm.Show();
+        }
     }
 }

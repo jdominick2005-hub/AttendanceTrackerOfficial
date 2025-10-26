@@ -171,6 +171,7 @@
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
             Name = "LoginPage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginPage";
             Load += LoginPage_Load;
             ResumeLayout(false);
