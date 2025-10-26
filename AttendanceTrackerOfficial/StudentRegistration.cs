@@ -16,5 +16,10 @@ namespace AttendanceTrackerOfficial
         {
             InitializeComponent();
         }
+
+        private void StudentRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

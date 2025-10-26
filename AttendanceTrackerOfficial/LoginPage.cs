@@ -70,7 +70,7 @@ namespace AttendanceTrackerOfficial
                         Properties.Settings.Default.RememberMe = chkbxremember.Checked;
                         Properties.Settings.Default.Save();
 
-                        Student_Attendance_Db dashboard = new Student_Attendance_Db();
+                        Dashboard dashboard = new Dashboard();
                         this.Hide();
                         dashboard.Show();
                     }

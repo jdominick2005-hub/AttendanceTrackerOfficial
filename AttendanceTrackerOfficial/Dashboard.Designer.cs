@@ -1,6 +1,6 @@
 ﻿namespace AttendanceTrackerOfficial
 {
-    partial class Daily_Attendance_Record
+    partial class Student_Attendance_Db
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Daily_Attendance_Record));
-            button1 = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Attendance_Db));
             label1 = new Label();
             pictureBox2 = new PictureBox();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
-            label2 = new Label();
             button7 = new Button();
             button3 = new Button();
             button6 = new Button();
@@ -43,54 +41,37 @@
             panel1 = new Panel();
             panel3 = new Panel();
             label5 = new Label();
+            button1 = new Button();
+            label2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
-            // button1
-            // 
-            button1.Location = new Point(934, 78);
-            button1.Name = "button1";
-            button1.Size = new Size(66, 29);
-            button1.TabIndex = 64;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(816, 40);
+            label1.Location = new Point(792, 40);
             label1.Name = "label1";
             label1.Size = new Size(114, 15);
-            label1.TabIndex = 62;
+            label1.TabIndex = 50;
             label1.Text = "NAME OF THE USER";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(946, 32);
+            pictureBox2.Location = new Point(922, 32);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 61;
+            pictureBox2.TabIndex = 49;
             pictureBox2.TabStop = false;
             // 
             // sqlCommand1
             // 
             sqlCommand1.CommandTimeout = 30;
             sqlCommand1.EnableOptimizedParameterBinding = false;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(260, 40);
-            label2.Name = "label2";
-            label2.Size = new Size(224, 32);
-            label2.TabIndex = 63;
-            label2.Text = "ATTENDANCE LOG";
             // 
             // button7
             // 
@@ -123,9 +104,9 @@
             // 
             button6.BackColor = Color.SteelBlue;
             button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.System;
+            button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button6.Location = new Point(13, 211);
+            button6.Location = new Point(12, 211);
             button6.Name = "button6";
             button6.Size = new Size(195, 48);
             button6.TabIndex = 4;
@@ -151,14 +132,15 @@
             button2.BackColor = Color.SteelBlue;
             button2.BackgroundImageLayout = ImageLayout.None;
             button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatStyle = FlatStyle.System;
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(11, 10);
+            button2.Location = new Point(12, 10);
             button2.Name = "button2";
             button2.Size = new Size(196, 48);
             button2.TabIndex = 0;
             button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // pictureBox1
             // 
@@ -183,7 +165,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(208, 644);
-            panel1.TabIndex = 60;
+            panel1.TabIndex = 48;
             // 
             // panel3
             // 
@@ -204,15 +186,35 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Silver;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(57, 205);
+            label5.Location = new Point(33, 205);
             label5.Name = "label5";
             label5.Size = new Size(0, 20);
-            label5.TabIndex = 59;
+            label5.TabIndex = 47;
             // 
-            // Daily_Attendance_Record
+            // button1
+            // 
+            button1.Location = new Point(910, 78);
+            button1.Name = "button1";
+            button1.Size = new Size(66, 29);
+            button1.TabIndex = 52;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(236, 40);
+            label2.Name = "label2";
+            label2.Size = new Size(164, 32);
+            label2.TabIndex = 51;
+            label2.Text = "DASHBOARD";
+            // 
+            // Student_Attendance_Db
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1008, 644);
             Controls.Add(button1);
             Controls.Add(label1);
@@ -220,8 +222,9 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(label5);
-            Name = "Daily_Attendance_Record";
-            Text = "Daily_Attendance_Record";
+            Name = "Student_Attendance_Db";
+            Text = "Student_Attendance_Db";
+            Load += Student_Attendance_Db_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -231,12 +234,9 @@
         }
 
         #endregion
-
-        private Button button1;
         private Label label1;
         private PictureBox pictureBox2;
         private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
-        private Label label2;
         private Button button7;
         private Button button3;
         private Button button6;
@@ -246,5 +246,7 @@
         private Panel panel1;
         private Panel panel3;
         private Label label5;
+        private Button button1;
+        private Label label2;
     }
 }
