@@ -46,8 +46,8 @@
             dataGridView1 = new DataGridView();
             addsubject = new Button();
             panel2 = new Panel();
-            subject = new ComboBox();
             professor = new ComboBox();
+            subject = new ComboBox();
             subjectID = new DataGridViewTextBoxColumn();
             subjectname = new DataGridViewTextBoxColumn();
             units = new DataGridViewTextBoxColumn();
@@ -262,16 +262,6 @@
             panel2.Size = new Size(871, 82);
             panel2.TabIndex = 61;
             // 
-            // subject
-            // 
-            subject.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            subject.FormattingEnabled = true;
-            subject.Location = new Point(309, 42);
-            subject.Name = "subject";
-            subject.Size = new Size(198, 29);
-            subject.TabIndex = 0;
-            subject.Text = "subjects";
-            // 
             // professor
             // 
             professor.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -282,11 +272,22 @@
             professor.TabIndex = 61;
             professor.Text = "professor";
             // 
+            // subject
+            // 
+            subject.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            subject.FormattingEnabled = true;
+            subject.Location = new Point(309, 42);
+            subject.Name = "subject";
+            subject.Size = new Size(198, 29);
+            subject.TabIndex = 0;
+            subject.Text = "subjects";
+            // 
             // subjectID
             // 
             subjectID.HeaderText = "SubjectID";
             subjectID.MinimumWidth = 6;
             subjectID.Name = "subjectID";
+            subjectID.Visible = false;
             subjectID.Width = 125;
             // 
             // subjectname
