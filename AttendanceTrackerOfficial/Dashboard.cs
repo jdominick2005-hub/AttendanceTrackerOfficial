@@ -32,5 +32,11 @@ namespace AttendanceTrackerOfficial
             this.Hide();
             RegistrationForm.Show();
         }
+        private void btnAttendanceReport_Click(object sender, EventArgs e)
+        {
+            Attendance_Summary summaryForm = new Attendance_Summary(this);
+            this.Hide();
+            summaryForm.Show();
+        }
     }
 }

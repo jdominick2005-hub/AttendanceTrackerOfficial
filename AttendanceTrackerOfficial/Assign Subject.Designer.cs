@@ -44,16 +44,16 @@
             panel3 = new Panel();
             label5 = new Label();
             dataGridView1 = new DataGridView();
-            addsubject = new Button();
-            panel2 = new Panel();
-            professor = new ComboBox();
-            subject = new ComboBox();
             subjectID = new DataGridViewTextBoxColumn();
             subjectname = new DataGridViewTextBoxColumn();
             units = new DataGridViewTextBoxColumn();
             semester = new DataGridViewTextBoxColumn();
             dateAssigned = new DataGridViewTextBoxColumn();
             userID = new DataGridViewTextBoxColumn();
+            addsubject = new Button();
+            panel2 = new Panel();
+            professor = new ComboBox();
+            subject = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -64,10 +64,9 @@
             // 
             // button1
             // 
-            button1.Location = new Point(1058, 104);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(926, 78);
             button1.Name = "button1";
-            button1.Size = new Size(75, 39);
+            button1.Size = new Size(66, 29);
             button1.TabIndex = 58;
             button1.Text = "button1";
             button1.UseVisualStyleBackColor = true;
@@ -75,19 +74,18 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(923, 53);
+            label1.Location = new Point(808, 40);
             label1.Name = "label1";
-            label1.Size = new Size(143, 20);
+            label1.Size = new Size(113, 15);
             label1.TabIndex = 56;
             label1.Text = "NAME OF THE USER";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(1072, 43);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
+            pictureBox2.Location = new Point(938, 32);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(46, 53);
+            pictureBox2.Size = new Size(40, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 55;
             pictureBox2.TabStop = false;
@@ -101,9 +99,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(288, 53);
+            label2.Location = new Point(252, 40);
             label2.Name = "label2";
-            label2.Size = new Size(336, 41);
+            label2.Size = new Size(266, 32);
             label2.TabIndex = 57;
             label2.Text = "SUBJECT ALLOCATION";
             // 
@@ -113,10 +111,9 @@
             button7.FlatAppearance.BorderSize = 0;
             button7.FlatStyle = FlatStyle.Flat;
             button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button7.Location = new Point(14, 371);
-            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Location = new Point(12, 278);
             button7.Name = "button7";
-            button7.Size = new Size(223, 64);
+            button7.Size = new Size(195, 48);
             button7.TabIndex = 6;
             button7.Text = "Attendance Report";
             button7.UseVisualStyleBackColor = false;
@@ -128,10 +125,9 @@
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button3.Location = new Point(14, 103);
-            button3.Margin = new Padding(3, 4, 3, 4);
+            button3.Location = new Point(12, 77);
             button3.Name = "button3";
-            button3.Size = new Size(223, 64);
+            button3.Size = new Size(195, 48);
             button3.TabIndex = 5;
             button3.Text = "Student Management";
             button3.UseVisualStyleBackColor = false;
@@ -142,10 +138,9 @@
             button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button6.Location = new Point(14, 281);
-            button6.Margin = new Padding(3, 4, 3, 4);
+            button6.Location = new Point(12, 211);
             button6.Name = "button6";
-            button6.Size = new Size(223, 64);
+            button6.Size = new Size(195, 48);
             button6.TabIndex = 4;
             button6.Text = "Attendance Log";
             button6.UseVisualStyleBackColor = false;
@@ -157,10 +152,9 @@
             button4.FlatAppearance.BorderSize = 0;
             button4.FlatStyle = FlatStyle.System;
             button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button4.Location = new Point(15, 192);
-            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Location = new Point(13, 144);
             button4.Name = "button4";
-            button4.Size = new Size(223, 64);
+            button4.Size = new Size(195, 48);
             button4.TabIndex = 2;
             button4.Text = "Subject Allocation";
             button4.UseVisualStyleBackColor = false;
@@ -172,10 +166,9 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold);
-            button2.Location = new Point(13, 13);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(11, 10);
             button2.Name = "button2";
-            button2.Size = new Size(224, 64);
+            button2.Size = new Size(196, 48);
             button2.TabIndex = 0;
             button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = false;
@@ -186,9 +179,8 @@
             pictureBox1.BackgroundImageLayout = ImageLayout.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(237, 248);
+            pictureBox1.Size = new Size(207, 186);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -202,9 +194,8 @@
             panel1.Controls.Add(panel3);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(237, 859);
+            panel1.Size = new Size(208, 644);
             panel1.TabIndex = 54;
             // 
             // panel3
@@ -216,10 +207,9 @@
             panel3.Controls.Add(button6);
             panel3.Controls.Add(button4);
             panel3.Controls.Add(button2);
-            panel3.Location = new Point(-1, 244);
-            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Location = new Point(-1, 183);
             panel3.Name = "panel3";
-            panel3.Size = new Size(238, 727);
+            panel3.Size = new Size(208, 545);
             panel3.TabIndex = 1;
             // 
             // label5
@@ -227,60 +217,21 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Silver;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(56, 273);
+            label5.Location = new Point(49, 205);
             label5.Name = "label5";
-            label5.Size = new Size(0, 25);
+            label5.Size = new Size(0, 20);
             label5.TabIndex = 53;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { subjectID, subjectname, units, semester, dateAssigned, userID });
-            dataGridView1.Location = new Point(262, 300);
+            dataGridView1.Location = new Point(229, 225);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(871, 547);
+            dataGridView1.Size = new Size(762, 410);
             dataGridView1.TabIndex = 59;
-            // 
-            // addsubject
-            // 
-            addsubject.Location = new Point(570, 42);
-            addsubject.Name = "addsubject";
-            addsubject.Size = new Size(202, 29);
-            addsubject.TabIndex = 60;
-            addsubject.Text = "AddSubject";
-            addsubject.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.BackColor = SystemColors.ControlDark;
-            panel2.Controls.Add(professor);
-            panel2.Controls.Add(subject);
-            panel2.Controls.Add(addsubject);
-            panel2.Location = new Point(262, 216);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(871, 82);
-            panel2.TabIndex = 61;
-            // 
-            // professor
-            // 
-            professor.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            professor.FormattingEnabled = true;
-            professor.Location = new Point(41, 42);
-            professor.Name = "professor";
-            professor.Size = new Size(202, 29);
-            professor.TabIndex = 61;
-            professor.Text = "professor";
-            // 
-            // subject
-            // 
-            subject.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            subject.FormattingEnabled = true;
-            subject.Location = new Point(309, 42);
-            subject.Name = "subject";
-            subject.Size = new Size(198, 29);
-            subject.TabIndex = 0;
-            subject.Text = "subjects";
             // 
             // subjectID
             // 
@@ -325,11 +276,55 @@
             userID.Name = "userID";
             userID.Width = 125;
             // 
+            // addsubject
+            // 
+            addsubject.Location = new Point(499, 32);
+            addsubject.Margin = new Padding(3, 2, 3, 2);
+            addsubject.Name = "addsubject";
+            addsubject.Size = new Size(177, 22);
+            addsubject.TabIndex = 60;
+            addsubject.Text = "AddSubject";
+            addsubject.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = SystemColors.ControlDark;
+            panel2.Controls.Add(professor);
+            panel2.Controls.Add(subject);
+            panel2.Controls.Add(addsubject);
+            panel2.Location = new Point(229, 162);
+            panel2.Margin = new Padding(3, 2, 3, 2);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(762, 62);
+            panel2.TabIndex = 61;
+            // 
+            // professor
+            // 
+            professor.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            professor.FormattingEnabled = true;
+            professor.Location = new Point(36, 32);
+            professor.Margin = new Padding(3, 2, 3, 2);
+            professor.Name = "professor";
+            professor.Size = new Size(177, 25);
+            professor.TabIndex = 61;
+            professor.Text = "professor";
+            // 
+            // subject
+            // 
+            subject.Font = new Font("Calibri", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            subject.FormattingEnabled = true;
+            subject.Location = new Point(270, 32);
+            subject.Margin = new Padding(3, 2, 3, 2);
+            subject.Name = "subject";
+            subject.Size = new Size(174, 25);
+            subject.TabIndex = 0;
+            subject.Text = "subjects";
+            // 
             // Assign_Subject
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1152, 859);
+            ClientSize = new Size(1008, 644);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
             Controls.Add(button1);
@@ -338,9 +333,9 @@
             Controls.Add(label2);
             Controls.Add(panel1);
             Controls.Add(label5);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Assign_Subject";
             Text = "Assign_Subject";
+            Load += Assign_Subject_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

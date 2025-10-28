@@ -16,5 +16,10 @@ namespace AttendanceTrackerOfficial
         {
             InitializeComponent();
         }
+
+        private void Assign_Subject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

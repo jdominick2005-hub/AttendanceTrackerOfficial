@@ -92,5 +92,15 @@ namespace AttendanceTrackerOfficial
             this.Hide();
             dashboardForm.Show();
         }
+
+        private void Registration_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

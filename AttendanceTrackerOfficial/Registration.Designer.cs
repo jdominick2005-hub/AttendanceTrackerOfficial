@@ -159,35 +159,36 @@
             // 
             // txtStudentId
             // 
-            txtStudentId.Location = new Point(231, 135);
+            txtStudentId.Location = new Point(231, 95);
             txtStudentId.Multiline = true;
             txtStudentId.Name = "txtStudentId";
             txtStudentId.Size = new Size(223, 32);
-            txtStudentId.TabIndex = 6;
+            txtStudentId.TabIndex = 1;
             // 
             // txtFullName
             // 
-            txtFullName.Location = new Point(231, 171);
+            txtFullName.Location = new Point(231, 133);
             txtFullName.Multiline = true;
             txtFullName.Name = "txtFullName";
             txtFullName.Size = new Size(223, 31);
-            txtFullName.TabIndex = 7;
+            txtFullName.TabIndex = 2;
+            txtFullName.TextChanged += txtFullName_TextChanged;
             // 
             // txtYearLevel
             // 
-            txtYearLevel.Location = new Point(231, 208);
+            txtYearLevel.Location = new Point(231, 170);
             txtYearLevel.Multiline = true;
             txtYearLevel.Name = "txtYearLevel";
             txtYearLevel.Size = new Size(223, 32);
-            txtYearLevel.TabIndex = 8;
+            txtYearLevel.TabIndex = 3;
             // 
             // txtCourse
             // 
-            txtCourse.Location = new Point(231, 284);
+            txtCourse.Location = new Point(231, 208);
             txtCourse.Multiline = true;
             txtCourse.Name = "txtCourse";
             txtCourse.Size = new Size(223, 32);
-            txtCourse.TabIndex = 9;
+            txtCourse.TabIndex = 4;
             // 
             // txtUnits
             // 
@@ -195,15 +196,15 @@
             txtUnits.Multiline = true;
             txtUnits.Name = "txtUnits";
             txtUnits.Size = new Size(223, 32);
-            txtUnits.TabIndex = 10;
+            txtUnits.TabIndex = 5;
             // 
             // txtClassified
             // 
-            txtClassified.Location = new Point(231, 97);
+            txtClassified.Location = new Point(231, 290);
             txtClassified.Multiline = true;
             txtClassified.Name = "txtClassified";
             txtClassified.Size = new Size(223, 32);
-            txtClassified.TabIndex = 11;
+            txtClassified.TabIndex = 7;
             // 
             // btnSubmit
             // 
@@ -212,7 +213,7 @@
             btnSubmit.Location = new Point(564, 90);
             btnSubmit.Name = "btnSubmit";
             btnSubmit.Size = new Size(96, 39);
-            btnSubmit.TabIndex = 12;
+            btnSubmit.TabIndex = 8;
             btnSubmit.Text = "Submit\r\n";
             btnSubmit.UseVisualStyleBackColor = true;
             btnSubmit.Click += btnSubmit_Click;
@@ -224,7 +225,7 @@
             btnDelete.Location = new Point(564, 135);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(96, 39);
-            btnDelete.TabIndex = 13;
+            btnDelete.TabIndex = 9;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             btnDelete.Click += btnDelete_Click;
@@ -236,7 +237,7 @@
             btnUpdate.Location = new Point(564, 180);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(96, 39);
-            btnUpdate.TabIndex = 14;
+            btnUpdate.TabIndex = 10;
             btnUpdate.Text = "Update";
             btnUpdate.UseVisualStyleBackColor = true;
             btnUpdate.Click += btnUpdate_Click;
@@ -248,7 +249,7 @@
             btnShow.Location = new Point(564, 225);
             btnShow.Name = "btnShow";
             btnShow.Size = new Size(96, 39);
-            btnShow.TabIndex = 15;
+            btnShow.TabIndex = 11;
             btnShow.Text = "Show\r\n";
             btnShow.UseVisualStyleBackColor = true;
             btnShow.Click += btnShow_Click;
@@ -260,7 +261,7 @@
             btnView.Location = new Point(534, 290);
             btnView.Name = "btnView";
             btnView.Size = new Size(171, 36);
-            btnView.TabIndex = 16;
+            btnView.TabIndex = 12;
             btnView.Text = "View Student Registered";
             btnView.UseVisualStyleBackColor = true;
             btnView.Click += btnView_Click;
@@ -272,7 +273,7 @@
             dataGridView1.Location = new Point(118, 368);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(620, 246);
-            dataGridView1.TabIndex = 17;
+            dataGridView1.TabIndex = 13;
             // 
             // button1
             // 
@@ -281,7 +282,7 @@
             button1.Location = new Point(118, 68);
             button1.Name = "button1";
             button1.Size = new Size(358, 272);
-            button1.TabIndex = 18;
+            button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -323,6 +324,7 @@
             Name = "Registration";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registration";
+            Load += Registration_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

@@ -43,10 +43,16 @@
             panel1 = new Panel();
             panel3 = new Panel();
             label5 = new Label();
+            dataGridView1 = new DataGridView();
+            btnViewSummary = new Button();
+            cmbSemester = new ComboBox();
+            cmbCourse = new ComboBox();
+            cmbSection = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -63,7 +69,7 @@
             label1.AutoSize = true;
             label1.Location = new Point(816, 40);
             label1.Name = "label1";
-            label1.Size = new Size(114, 15);
+            label1.Size = new Size(113, 15);
             label1.TabIndex = 62;
             label1.Text = "NAME OF THE USER";
             // 
@@ -209,11 +215,57 @@
             label5.Size = new Size(0, 20);
             label5.TabIndex = 59;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(313, 184);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(579, 347);
+            dataGridView1.TabIndex = 69;
+            // 
+            // btnViewSummary
+            // 
+            btnViewSummary.Location = new Point(817, 130);
+            btnViewSummary.Name = "btnViewSummary";
+            btnViewSummary.Size = new Size(75, 33);
+            btnViewSummary.TabIndex = 68;
+            btnViewSummary.Text = "view";
+            btnViewSummary.UseVisualStyleBackColor = true;
+            // 
+            // cmbSemester
+            // 
+            cmbSemester.FormattingEnabled = true;
+            cmbSemester.Location = new Point(667, 136);
+            cmbSemester.Name = "cmbSemester";
+            cmbSemester.Size = new Size(121, 23);
+            cmbSemester.TabIndex = 67;
+            // 
+            // cmbCourse
+            // 
+            cmbCourse.FormattingEnabled = true;
+            cmbCourse.Location = new Point(504, 135);
+            cmbCourse.Name = "cmbCourse";
+            cmbCourse.Size = new Size(121, 23);
+            cmbCourse.TabIndex = 66;
+            // 
+            // cmbSection
+            // 
+            cmbSection.FormattingEnabled = true;
+            cmbSection.Location = new Point(327, 139);
+            cmbSection.Name = "cmbSection";
+            cmbSection.Size = new Size(121, 23);
+            cmbSection.TabIndex = 65;
+            // 
             // Attendance_Summary
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1008, 644);
+            Controls.Add(dataGridView1);
+            Controls.Add(btnViewSummary);
+            Controls.Add(cmbSemester);
+            Controls.Add(cmbCourse);
+            Controls.Add(cmbSection);
             Controls.Add(button1);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
@@ -222,10 +274,12 @@
             Controls.Add(label5);
             Name = "Attendance_Summary";
             Text = "Attendance_Summary";
+            Load += Attendance_Summary_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -246,5 +300,10 @@
         private Panel panel1;
         private Panel panel3;
         private Label label5;
+        private DataGridView dataGridView1;
+        private Button btnViewSummary;
+        private ComboBox cmbSemester;
+        private ComboBox cmbCourse;
+        private ComboBox cmbSection;
     }
 }
