@@ -14,7 +14,7 @@ namespace AttendanceTrackerOfficial
 {
     public partial class Student_Registered : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davin\OneDrive\Pictures\ドキュメント\UserInformationDB.mdf;Integrated Security=True;Connect Timeout=30");
+        SqlConnection con = new SqlConnection(@"Data Source=GERALD\SQLEXPRESS;Initial Catalog=attendance_db;Integrated Security=True;Encrypt=True;Trust Server Certificate=True");
 
         public Student_Registered()
         {
@@ -57,7 +57,7 @@ namespace AttendanceTrackerOfficial
 
         private void label2_Click(object sender, EventArgs e)
         {
-            Registration RegistrationForm = new Registration();
+            StudentManagement RegistrationForm = new StudentManagement();
             this.Hide();
             RegistrationForm.Show();
         }

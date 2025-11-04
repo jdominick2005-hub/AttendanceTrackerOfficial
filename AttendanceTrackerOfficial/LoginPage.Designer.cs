@@ -44,20 +44,22 @@
             // 
             txtusername.BackColor = Color.White;
             txtusername.BorderStyle = BorderStyle.None;
-            txtusername.Location = new Point(376, 244);
+            txtusername.Location = new Point(430, 325);
+            txtusername.Margin = new Padding(3, 4, 3, 4);
             txtusername.Multiline = true;
             txtusername.Name = "txtusername";
-            txtusername.Size = new Size(230, 35);
+            txtusername.Size = new Size(263, 47);
             txtusername.TabIndex = 0;
             // 
             // txtpassword
             // 
             txtpassword.BackColor = Color.White;
             txtpassword.BorderStyle = BorderStyle.None;
-            txtpassword.Location = new Point(374, 310);
+            txtpassword.Location = new Point(427, 413);
+            txtpassword.Margin = new Padding(3, 4, 3, 4);
             txtpassword.Multiline = true;
             txtpassword.Name = "txtpassword";
-            txtpassword.Size = new Size(230, 35);
+            txtpassword.Size = new Size(263, 47);
             txtpassword.TabIndex = 1;
             // 
             // btnlogin
@@ -67,9 +69,10 @@
             btnlogin.FlatStyle = FlatStyle.Popup;
             btnlogin.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnlogin.ForeColor = Color.White;
-            btnlogin.Location = new Point(439, 433);
+            btnlogin.Location = new Point(502, 577);
+            btnlogin.Margin = new Padding(3, 4, 3, 4);
             btnlogin.Name = "btnlogin";
-            btnlogin.Size = new Size(96, 29);
+            btnlogin.Size = new Size(110, 39);
             btnlogin.TabIndex = 2;
             btnlogin.Text = "LOGIN";
             btnlogin.UseVisualStyleBackColor = false;
@@ -81,9 +84,9 @@
             lblusername.BackColor = Color.Transparent;
             lblusername.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblusername.ForeColor = Color.Black;
-            lblusername.Location = new Point(374, 226);
+            lblusername.Location = new Point(427, 301);
             lblusername.Name = "lblusername";
-            lblusername.Size = new Size(67, 17);
+            lblusername.Size = new Size(87, 23);
             lblusername.TabIndex = 3;
             lblusername.Text = "Username";
             // 
@@ -93,9 +96,9 @@
             lblpassword.BackColor = Color.Transparent;
             lblpassword.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblpassword.ForeColor = Color.Black;
-            lblpassword.Location = new Point(374, 292);
+            lblpassword.Location = new Point(427, 389);
             lblpassword.Name = "lblpassword";
-            lblpassword.Size = new Size(64, 17);
+            lblpassword.Size = new Size(80, 23);
             lblpassword.TabIndex = 4;
             lblpassword.Text = "Password";
             // 
@@ -104,11 +107,12 @@
             chkbxremember.AutoSize = true;
             chkbxremember.BackColor = Color.Transparent;
             chkbxremember.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            chkbxremember.Location = new Point(373, 351);
+            chkbxremember.Location = new Point(426, 468);
+            chkbxremember.Margin = new Padding(3, 4, 3, 4);
             chkbxremember.Name = "chkbxremember";
-            chkbxremember.Size = new Size(107, 17);
+            chkbxremember.Size = new Size(120, 23);
             chkbxremember.TabIndex = 6;
-            chkbxremember.Text = "Show Password";
+            chkbxremember.Text = "Remember me";
             chkbxremember.UseVisualStyleBackColor = false;
             // 
             // lnkforgotpass
@@ -119,9 +123,9 @@
             lnkforgotpass.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lnkforgotpass.ForeColor = Color.Black;
             lnkforgotpass.LinkColor = Color.Black;
-            lnkforgotpass.Location = new Point(506, 352);
+            lnkforgotpass.Location = new Point(578, 469);
             lnkforgotpass.Name = "lnkforgotpass";
-            lnkforgotpass.Size = new Size(100, 13);
+            lnkforgotpass.Size = new Size(118, 19);
             lnkforgotpass.TabIndex = 9;
             lnkforgotpass.TabStop = true;
             lnkforgotpass.Text = "Forgot password?";
@@ -135,9 +139,9 @@
             lnksignup.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lnksignup.ForeColor = Color.Black;
             lnksignup.LinkColor = Color.DodgerBlue;
-            lnksignup.Location = new Point(529, 465);
+            lnksignup.Location = new Point(605, 620);
             lnksignup.Name = "lnksignup";
-            lnksignup.Size = new Size(48, 15);
+            lnksignup.Size = new Size(61, 20);
             lnksignup.TabIndex = 11;
             lnksignup.TabStop = true;
             lnksignup.Text = "Sign up";
@@ -147,18 +151,19 @@
             // 
             lbldonthaveacc.AutoSize = true;
             lbldonthaveacc.BackColor = Color.Transparent;
-            lbldonthaveacc.Location = new Point(401, 465);
+            lbldonthaveacc.Location = new Point(458, 620);
             lbldonthaveacc.Name = "lbldonthaveacc";
-            lbldonthaveacc.Size = new Size(131, 15);
+            lbldonthaveacc.Size = new Size(163, 20);
             lbldonthaveacc.TabIndex = 12;
             lbldonthaveacc.Text = "Don't have an account?";
             // 
             // LoginPage
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(964, 611);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1102, 815);
             Controls.Add(lbldonthaveacc);
             Controls.Add(lnksignup);
             Controls.Add(lnkforgotpass);
@@ -170,6 +175,7 @@
             Controls.Add(txtusername);
             DoubleBuffered = true;
             ForeColor = SystemColors.ControlText;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginPage";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginPage";

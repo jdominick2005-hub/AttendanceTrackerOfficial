@@ -44,7 +44,7 @@ namespace AttendanceTrackerOfficial
             }
 
             // ✅ Use connection string from App.config instead
-            string connectionString = ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString;
 
             try
             {

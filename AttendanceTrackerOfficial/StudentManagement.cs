@@ -12,16 +12,16 @@ using Microsoft.Data.SqlClient;
 
 namespace AttendanceTrackerOfficial
 {
-    public partial class Registration : Form
+    public partial class StudentManagement : Form
     {
-        public Registration()
+        public StudentManagement()
         {
             InitializeComponent();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davin\OneDrive\Pictures\ドキュメント\UserInformationDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("AttendanceDB");
             con.Open();
             SqlCommand cmd = new SqlCommand("Insert into Register values (@StudentId, @Name, @YearLevel, @Course, @Units, @Classified)", con);
             cmd.Parameters.AddWithValue("@StudentId", int.Parse(txtStudentId.Text));
@@ -38,7 +38,7 @@ namespace AttendanceTrackerOfficial
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davin\OneDrive\Pictures\ドキュメント\UserInformationDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("AttendanceDB");
             con.Open();
             SqlCommand cmd = new SqlCommand("Delete Register where StudentId=@StudentId", con);
             cmd.Parameters.AddWithValue("@StudentId", int.Parse(txtStudentId.Text));
@@ -49,7 +49,7 @@ namespace AttendanceTrackerOfficial
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davin\OneDrive\Pictures\ドキュメント\UserInformationDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("AttendanceDB");
             con.Open();
             SqlCommand cmd = new SqlCommand(@"UPDATE Register 
                     SET Name = @Name, YearLevel = @YearLevel, Course = @Course, Units = @Units, Classified = @Classified 
@@ -70,7 +70,7 @@ namespace AttendanceTrackerOfficial
 
         private void btnShow_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\davin\OneDrive\Pictures\ドキュメント\UserInformationDB.mdf;Integrated Security=True;Connect Timeout=30");
+            SqlConnection con = new SqlConnection("AttendanceDB");
             con.Open();
             SqlCommand cmd = new SqlCommand("Select * from Register", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);

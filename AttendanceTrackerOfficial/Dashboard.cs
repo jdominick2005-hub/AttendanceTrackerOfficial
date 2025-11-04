@@ -28,15 +28,30 @@ namespace AttendanceTrackerOfficial
 
         private void btnStudentManagement_Click(object sender, EventArgs e)
         {
-            Registration RegistrationForm = new Registration();
+            StudentManagement RegistrationForm = new StudentManagement();
             this.Hide();
             RegistrationForm.Show();
         }
+
+        private void btnSubjectAllocation_Click_1(object sender, EventArgs e)
+        {
+            AssignSubject AssignSubjectForm = new AssignSubject();
+            this.Hide();  // hides the dashboard
+            AssignSubjectForm.Show();  // opens your Assign Subject form
+        }
+
+        private void btnattendancelog_Click(object sender, EventArgs e)
+        {
+            AttendanceReport Attendance_SummaryForm = new AttendanceReport(this);
+            this.Hide();
+            Attendance_SummaryForm.Show();
+        }
+
         private void btnAttendanceReport_Click(object sender, EventArgs e)
         {
-            Attendance_Summary summaryForm = new Attendance_Summary(this);
-            this.Hide();
-            summaryForm.Show();
+            AttendanceReport AttendanceReportForm = new AttendanceReport(this);
+            this.Hide();  // hides the dashboard
+            AttendanceReportForm.Show();
         }
     }
 }

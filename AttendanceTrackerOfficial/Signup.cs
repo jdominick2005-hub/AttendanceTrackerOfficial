@@ -19,7 +19,7 @@
         public partial class Signup : Form
         {
             SqlConnection connect = new SqlConnection(
-             ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString
+             ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString
          );
 
 
@@ -55,8 +55,8 @@
                             else
                             {
                                 // Insert new user (including name)
-                                string insertData = "INSERT INTO Logins (Name, Username, Password, Date_Created) " +
-                                                    "VALUES(@name, @username, @password, @date)";
+                                string insertData = "INSERT INTO Logins (Name, Username, Password, DateCreated) " +
+                                                    "VALUES(@name, @username, @password, @dateCreated)";
 
                                 DateTime date = DateTime.Today;
 
@@ -65,7 +65,7 @@
                                     cmd.Parameters.AddWithValue("@name", signup_name.Text.Trim());
                                     cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
                                     cmd.Parameters.AddWithValue("@password", signup_password.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@date", date);
+                                    cmd.Parameters.AddWithValue("@dateCreated", date);
 
                                     cmd.ExecuteNonQuery();
 

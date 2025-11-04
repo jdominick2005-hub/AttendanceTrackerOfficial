@@ -3,27 +3,28 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using Microsoft.Data.SqlClient;
 
 namespace AttendanceTrackerOfficial
 {
-    public partial class Attendance_Summary : Form
+    public partial class AttendanceReport : Form
     {
         private Student_Attendance_Db dashboardForm;
 
-        public Attendance_Summary(Student_Attendance_Db dashboard)
+        public AttendanceReport(Student_Attendance_Db dashboard)
         {
             InitializeComponent();
             dashboardForm = dashboard;
         }
 
-        private void Attendance_Summary_Load(object sender, EventArgs e)
+        private void AttendanceReport_Load(object sender, EventArgs e)
         {
             LoadComboBoxes();
         }
 
         private void LoadComboBoxes()
         {
-            string connectionString = ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString;
+            string connectionString = ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString;
 
             try
             {
@@ -136,6 +137,11 @@ namespace AttendanceTrackerOfficial
         {
             this.Hide();
             dashboardForm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

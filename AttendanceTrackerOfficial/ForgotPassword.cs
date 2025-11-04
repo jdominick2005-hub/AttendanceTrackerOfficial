@@ -37,7 +37,7 @@ namespace AttendanceTrackerOfficial
             }
 
             using (SqlConnection con = new SqlConnection(
-                System.Configuration.ConfigurationManager.ConnectionStrings["UserInformationDB"].ConnectionString))
+                System.Configuration.ConfigurationManager.ConnectionStrings["AttendanceDB"].ConnectionString))
             {
                 try
                 {
