@@ -11,13 +11,6 @@ namespace AttendanceTrackerOfficial
         {
             InitializeComponent();
         }
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            Student_Attendance_Db dashboard = new Student_Attendance_Db();
-            this.Hide();
-            dashboard.Show();
-        }
-
         // ADD
         private void btnadd_Click(object sender, EventArgs e)
         {
@@ -165,6 +158,34 @@ namespace AttendanceTrackerOfficial
         private void txtsubject_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            Student_Attendance_Db Student_Attendance_DbForm = new Student_Attendance_Db();
+            Student_Attendance_DbForm.Show();
+            this.Hide();
+        }
+
+        private void btnStudentManagement_Click(object sender, EventArgs e)
+        {
+            StudentManagement StudentManagementForm = new StudentManagement();
+            StudentManagementForm.Show();
+            this.Hide();
+        }
+
+        private void btnattendancelog_Click_1(object sender, EventArgs e)
+        {
+            Daily_Attendance_Record Daily_Attendance_RecordForm = new Daily_Attendance_Record();
+            Daily_Attendance_RecordForm.Show();
+            this.Hide();
+        }
+
+        private void btnAttendanceReport_Click_1(object sender, EventArgs e)
+        {
+            AttendanceReport AttendanceReportForm = new AttendanceReport();
+            AttendanceReportForm.Show();
+            this.Hide();
         }
     }
 }

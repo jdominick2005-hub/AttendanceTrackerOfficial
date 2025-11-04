@@ -86,21 +86,37 @@ namespace AttendanceTrackerOfficial
             Student_RegsiteredForm.Show();
         }
 
-        private void lblHome_Click(object sender, EventArgs e)
+        private void btnStudentManagement_Click(object sender, EventArgs e)
         {
-            Student_Attendance_Db dashboardForm = new Student_Attendance_Db();
+
+        }
+
+        private void btnSubjectAllocation_Click(object sender, EventArgs e)
+        {
+            AssignSubject AssignSubjectForm = new AssignSubject();
+            AssignSubjectForm.Show();
             this.Hide();
-            dashboardForm.Show();
         }
 
-        private void Registration_Load(object sender, EventArgs e)
+        private void btnattendancelog_Click(object sender, EventArgs e)
         {
-
+            Daily_Attendance_Record Daily_Attendance_RecordForm = new Daily_Attendance_Record();
+            Daily_Attendance_RecordForm.Show();
+            this.Hide();
         }
 
-        private void txtFullName_TextChanged(object sender, EventArgs e)
+        private void btnAttendanceReport_Click(object sender, EventArgs e)
         {
+            AttendanceReport AttendanceReportForm = new AttendanceReport();
+            AttendanceReportForm.Show();
+            this.Hide();
+        }
 
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Student_Attendance_Db Student_Attendance_DbForm = new Student_Attendance_Db();
+            Student_Attendance_DbForm.Show();
+            this.Hide();
         }
     }
 }

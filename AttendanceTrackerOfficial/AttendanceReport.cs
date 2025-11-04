@@ -17,6 +17,10 @@ namespace AttendanceTrackerOfficial
             dashboardForm = dashboard;
         }
 
+        public AttendanceReport()
+        {
+        }
+
         private void AttendanceReport_Load(object sender, EventArgs e)
         {
             LoadComboBoxes();
@@ -77,7 +81,34 @@ namespace AttendanceTrackerOfficial
             }
         }
 
-        private void btnAttendanceReport_Click(object sender, EventArgs e)
+        private void btnattendancelog_Click(object sender, EventArgs e)
+        {
+            Daily_Attendance_Record Daily_Attendance_RecordForm = new Daily_Attendance_Record();
+            Daily_Attendance_RecordForm.Show();
+            this.Hide();
+        }
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            Student_Attendance_Db Student_Attendance_DbForm = new Student_Attendance_Db();
+            Student_Attendance_DbForm.Show();
+            this.Hide();
+        }
+
+        private void btnStudentManagement_Click(object sender, EventArgs e)
+        {
+            StudentManagement StudentManagementForm = new StudentManagement();
+            StudentManagementForm.Show();
+            this.Hide();
+        }
+
+        private void btnSubjectAllocation_Click(object sender, EventArgs e)
+        {
+            AssignSubject AssignSubjectForm = new AssignSubject();
+            AssignSubjectForm.Show();
+            this.Hide();
+        }
+
+        private void btnAttendanceReport_Click_1(object sender, EventArgs e)
         {
             string course = cmbCourse.SelectedItem?.ToString();
             string yearLevel = cmbSemester.SelectedItem?.ToString();
@@ -131,17 +162,6 @@ namespace AttendanceTrackerOfficial
             {
                 MessageBox.Show("Error loading attendance summary: " + ex.Message, "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btnDashboard_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            dashboardForm.Show();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
