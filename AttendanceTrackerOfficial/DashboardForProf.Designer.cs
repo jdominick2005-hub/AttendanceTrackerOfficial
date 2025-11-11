@@ -1,6 +1,6 @@
 ﻿namespace AttendanceTrackerOfficial
 {
-    partial class Student_Attendance_Db
+    partial class DashboardForProf
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_Attendance_Db));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashboardForProf));
             label1 = new Label();
             pictureBox2 = new PictureBox();
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
@@ -53,20 +53,20 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(854, 47);
+            label1.Location = new Point(810, 47);
             label1.Name = "label1";
-            label1.Size = new Size(78, 25);
-            label1.TabIndex = 56;
-            label1.Text = "ADMIN";
+            label1.Size = new Size(118, 25);
+            label1.TabIndex = 62;
+            label1.Text = "PROFESSOR";
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(938, 32);
+            pictureBox2.Location = new Point(946, 32);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(40, 40);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 55;
+            pictureBox2.TabIndex = 61;
             pictureBox2.TabStop = false;
             // 
             // sqlCommand1
@@ -84,9 +84,8 @@
             btnAttendanceReport.Name = "btnAttendanceReport";
             btnAttendanceReport.Size = new Size(223, 56);
             btnAttendanceReport.TabIndex = 6;
-            btnAttendanceReport.Text = "Professors";
+            btnAttendanceReport.Text = "Report";
             btnAttendanceReport.UseVisualStyleBackColor = false;
-            btnAttendanceReport.Click += btnAttendanceReport_Click_1;
             // 
             // btnStudentManagement
             // 
@@ -99,9 +98,8 @@
             btnStudentManagement.Name = "btnStudentManagement";
             btnStudentManagement.Size = new Size(223, 56);
             btnStudentManagement.TabIndex = 5;
-            btnStudentManagement.Text = "Management";
+            btnStudentManagement.Text = "Students";
             btnStudentManagement.UseVisualStyleBackColor = false;
-            btnStudentManagement.Click += btnStudentManagement_Click_1;
             // 
             // btnattendancelog
             // 
@@ -113,9 +111,8 @@
             btnattendancelog.Name = "btnattendancelog";
             btnattendancelog.Size = new Size(223, 56);
             btnattendancelog.TabIndex = 4;
-            btnattendancelog.Text = "Users";
+            btnattendancelog.Text = "Attendance";
             btnattendancelog.UseVisualStyleBackColor = false;
-            btnattendancelog.Click += btnattendancelog_Click_1;
             // 
             // btnSubjectAllocation
             // 
@@ -130,7 +127,6 @@
             btnSubjectAllocation.TabIndex = 2;
             btnSubjectAllocation.Text = "Subjects";
             btnSubjectAllocation.UseVisualStyleBackColor = false;
-            btnSubjectAllocation.Click += btnSubjectAllocation_Click;
             // 
             // btnDashboard
             // 
@@ -169,7 +165,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(235, 644);
-            panel1.TabIndex = 54;
+            panel1.TabIndex = 60;
             // 
             // panel3
             // 
@@ -187,10 +183,10 @@
             // 
             // button1
             // 
-            button1.Location = new Point(926, 78);
+            button1.Location = new Point(934, 78);
             button1.Name = "button1";
             button1.Size = new Size(66, 29);
-            button1.TabIndex = 58;
+            button1.TabIndex = 64;
             button1.Text = "Log out";
             button1.UseVisualStyleBackColor = true;
             // 
@@ -198,10 +194,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(281, 50);
+            label2.Location = new Point(289, 50);
             label2.Name = "label2";
             label2.Size = new Size(164, 32);
-            label2.TabIndex = 57;
+            label2.TabIndex = 63;
             label2.Text = "DASHBOARD";
             // 
             // label5
@@ -209,16 +205,15 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Silver;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(49, 205);
+            label5.Location = new Point(57, 205);
             label5.Name = "label5";
             label5.Size = new Size(0, 20);
-            label5.TabIndex = 53;
+            label5.TabIndex = 59;
             // 
-            // Student_Attendance_Db
+            // DashboardForProf
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
             ClientSize = new Size(1008, 644);
             Controls.Add(label1);
             Controls.Add(pictureBox2);
@@ -228,10 +223,9 @@
             Controls.Add(label5);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "Student_Attendance_Db";
+            Name = "DashboardForProf";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Student_Attendance_Db";
-            Load += Student_Attendance_Db_Load;
+            Text = "DashboardForProf";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);

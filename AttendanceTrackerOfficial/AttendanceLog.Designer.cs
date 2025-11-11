@@ -94,9 +94,9 @@
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(291, 40);
             label2.Name = "label2";
-            label2.Size = new Size(224, 32);
+            label2.Size = new Size(86, 32);
             label2.TabIndex = 63;
-            label2.Text = "ATTENDANCE LOG";
+            label2.Text = "USERS";
             // 
             // btnAttendanceReport
             // 
@@ -108,7 +108,7 @@
             btnAttendanceReport.Name = "btnAttendanceReport";
             btnAttendanceReport.Size = new Size(223, 56);
             btnAttendanceReport.TabIndex = 6;
-            btnAttendanceReport.Text = "Attendance Report";
+            btnAttendanceReport.Text = "Professors";
             btnAttendanceReport.UseVisualStyleBackColor = false;
             btnAttendanceReport.Click += btnAttendanceReport_Click;
             // 
@@ -123,7 +123,7 @@
             btnStudentManagement.Name = "btnStudentManagement";
             btnStudentManagement.Size = new Size(223, 56);
             btnStudentManagement.TabIndex = 5;
-            btnStudentManagement.Text = "Student Management";
+            btnStudentManagement.Text = "Management";
             btnStudentManagement.UseVisualStyleBackColor = false;
             btnStudentManagement.Click += btnStudentManagement_Click;
             // 
@@ -137,7 +137,7 @@
             button6.Name = "button6";
             button6.Size = new Size(223, 56);
             button6.TabIndex = 4;
-            button6.Text = "Attendance Log";
+            button6.Text = "Users";
             button6.UseVisualStyleBackColor = false;
             // 
             // btnSubjectAllocation
@@ -151,7 +151,7 @@
             btnSubjectAllocation.Name = "btnSubjectAllocation";
             btnSubjectAllocation.Size = new Size(223, 56);
             btnSubjectAllocation.TabIndex = 2;
-            btnSubjectAllocation.Text = "Subject Allocation";
+            btnSubjectAllocation.Text = "Subjects";
             btnSubjectAllocation.UseVisualStyleBackColor = false;
             btnSubjectAllocation.Click += btnSubjectAllocation_Click;
             // 
@@ -166,7 +166,7 @@
             btnDashboard.Name = "btnDashboard";
             btnDashboard.Size = new Size(224, 56);
             btnDashboard.TabIndex = 0;
-            btnDashboard.Text = "Dashboard";
+            btnDashboard.Text = "Home";
             btnDashboard.UseVisualStyleBackColor = false;
             btnDashboard.Click += btnDashboard_Click;
             // 

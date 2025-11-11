@@ -35,9 +35,6 @@
             lblusername = new Label();
             lblpassword = new Label();
             chkbxremember = new CheckBox();
-            lnkforgotpass = new LinkLabel();
-            lnksignup = new LinkLabel();
-            lbldonthaveacc = new Label();
             SuspendLayout();
             // 
             // txtusername
@@ -111,48 +108,6 @@
             chkbxremember.Text = "Remember me";
             chkbxremember.UseVisualStyleBackColor = false;
             // 
-            // lnkforgotpass
-            // 
-            lnkforgotpass.ActiveLinkColor = Color.Red;
-            lnkforgotpass.AutoSize = true;
-            lnkforgotpass.BackColor = Color.Transparent;
-            lnkforgotpass.Font = new Font("Segoe UI Semibold", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lnkforgotpass.ForeColor = Color.Black;
-            lnkforgotpass.LinkColor = Color.Black;
-            lnkforgotpass.Location = new Point(500, 353);
-            lnkforgotpass.Name = "lnkforgotpass";
-            lnkforgotpass.Size = new Size(99, 13);
-            lnkforgotpass.TabIndex = 9;
-            lnkforgotpass.TabStop = true;
-            lnkforgotpass.Text = "Forgot password?";
-            lnkforgotpass.LinkClicked += lnkforgotpass_LinkClicked;
-            // 
-            // lnksignup
-            // 
-            lnksignup.ActiveLinkColor = Color.Red;
-            lnksignup.AutoSize = true;
-            lnksignup.BackColor = Color.Transparent;
-            lnksignup.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lnksignup.ForeColor = Color.Black;
-            lnksignup.LinkColor = Color.Blue;
-            lnksignup.Location = new Point(525, 466);
-            lnksignup.Name = "lnksignup";
-            lnksignup.Size = new Size(48, 15);
-            lnksignup.TabIndex = 11;
-            lnksignup.TabStop = true;
-            lnksignup.Text = "Sign up";
-            lnksignup.LinkClicked += lnksignup_LinkClicked;
-            // 
-            // lbldonthaveacc
-            // 
-            lbldonthaveacc.AutoSize = true;
-            lbldonthaveacc.BackColor = Color.Transparent;
-            lbldonthaveacc.Location = new Point(397, 466);
-            lbldonthaveacc.Name = "lbldonthaveacc";
-            lbldonthaveacc.Size = new Size(131, 15);
-            lbldonthaveacc.TabIndex = 12;
-            lbldonthaveacc.Text = "Don't have an account?";
-            // 
             // LoginPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -160,9 +115,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(964, 611);
-            Controls.Add(lbldonthaveacc);
-            Controls.Add(lnksignup);
-            Controls.Add(lnkforgotpass);
             Controls.Add(chkbxremember);
             Controls.Add(lblpassword);
             Controls.Add(lblusername);
@@ -189,8 +141,5 @@
         private Label lblusername;
         private Label lblpassword;
         private CheckBox chkbxremember;
-        private LinkLabel lnkforgotpass;
-        private LinkLabel lnksignup;
-        private Label lbldonthaveacc;
     }
 }
